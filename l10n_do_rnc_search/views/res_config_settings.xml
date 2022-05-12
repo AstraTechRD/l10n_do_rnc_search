@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_dgii_autocomplete" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.dgiii.autocomplete</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='contacts_settings']" position="inside">
+                <div id="dgii_autocomplete">
+                    <div class='row mt16 o_settings_container dgii_autocomplete' name="dgii_autocomplete_setting">
+                        <div class="col-xs-12 col-md-6 o_setting_box" title="When populating your address book, Odoo is Connected with DGII Server" id="dgii_partner_autocomplete">
+                            <div class="o_setting_left_pane">
+                                <field name="partner_dgii_autocomplete"/>
+                            </div>
+                            <div class="o_setting_right_pane" id="dgii_partner_autocomplete_settings">
+                                <label for="partner_dgii_autocomplete"/>
+                                <div class="text-muted">
+                                            Automatically Get Data From DGII
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

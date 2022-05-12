@@ -1,8 +1,3 @@
-# © 2018 Eneldo Serrata <eneldo@marcos.do>
-# © 2018 Kevin Jiménez <kevinjimenezlorenzo@gmail.com>
-# © 2018 Jorge Hernández <jhernandez@gruponeotec.com>
-# © 2018 Francisco Peñaló <frankpenalo24@gmail.com >
-
 # This file is part of NCF Manager.
 
 # NCF Manager is free software: you can redistribute it and/or modify
@@ -40,8 +35,11 @@ class Odoojs(http.Controller):
         term = kwargs.get("term", False)
         query_dgii_wsmovil = request.env['ir.config_parameter'].sudo(
         ).get_param('dgii.wsmovil')
+        
+        dgii_autocomplete = request.env['ir.config_parameter'].sudo(
+        ).get_param('l10n_do_rnc_search.dgii_autocomplete')
 
-        if term and query_dgii_wsmovil == 'True':
+        if term and query_dgii_wsmovil == 'True' and dgii_autocomplete:
             if term.isdigit() and len(term) in [9, 11]:
                 result = rnc.check_dgii(term)
             else:

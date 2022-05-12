@@ -5,9 +5,16 @@
         <field name="value">True</field>
     </record>
 
+    <record model="ir.config_parameter" id="dgii_autocomplete" forcecreate="False">
+        <field name="key">l10n_do_rnc_search.dgii_autocomplete</field>
+        <field name="value">True</field>
+    </record>
+
     <record id="set_to_false_contact_query" model="res.config.settings" forcecreate="0">
 
         <field eval="False" name="module_partner_autocomplete"/>
     </record>
+
+
 </odoo>
 

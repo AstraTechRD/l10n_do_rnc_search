@@ -23,6 +23,7 @@
        'data/ir_config_parameters.xml',
         'views/backend_js.xml',
         'views/res_partner_views.xml',
+        'views/res_config_settings.xml'
 
 
     ],

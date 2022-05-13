@@ -27,7 +27,7 @@ class AccountMove(models.Model):
             and r.l10n_latam_document_type_id.l10n_do_ncf_type is not False
             and r.journal_id.l10n_latam_use_documents
             and r.l10n_latam_document_number
-            and r.type == "in_invoice"
+            and r.move_type == "in_invoice"
         ):
 
             NCF = rec.l10n_latam_document_number if rec.l10n_latam_document_number else None

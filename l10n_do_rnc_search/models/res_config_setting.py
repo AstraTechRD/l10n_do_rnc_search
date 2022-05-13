@@ -7,4 +7,4 @@ class ResConfigSettings(models.TransientModel):
 
     _inherit = 'res.config.settings'
 
-    partner_dgii_autocomplete = fields.Boolean(string="DGII Autocomplete", config_parameter='l10n_do_accounting.dgii_autocomplete')
+    partner_dgii_autocomplete = fields.Boolean(string="DGII Autocomplete", config_parameter='l10n_do_rnc_search.dgii_autocomplete')

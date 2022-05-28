@@ -12,7 +12,7 @@ odoo.define('l10n_do_accounting.l10n_do_accounting', function (require) {
                 source: "/dgii_ws/",
                 minLength: 3,
                 select: function (event, ui) {
-                    var $rnc = $("input[name$='vat']");
+                    var $rnc = $("div[name$='vat']").children();
                     $input.val(ui.item.name);
                     $rnc.val(ui.item.rnc).trigger("change");
 
